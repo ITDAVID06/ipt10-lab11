@@ -10,7 +10,7 @@
 
     <h1>{{ course.course_code }}</h1>
     <h2 style="color:red">{{ course.course_name }}</h2>
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>#</th>
@@ -19,10 +19,14 @@
         </thead>
         <tbody>
 
-            {{# enrollees }}
+            {{# enrolees }}
             <tr>
+            <th>
+            {{ student_code}}
+            </th>
+            <th>{{ student_name}}</th>
             </tr>
-            {{/ enrollees }}
+            {{/ enrolees }}
         </tbody>
     </table>
 

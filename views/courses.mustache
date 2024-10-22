@@ -9,12 +9,14 @@
 <body>
 
     <h1>Courses</h1>
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>#</th>
                 <th>Course Name</th>
                 <th>Course Code</th>
+                <th>Number of Enrolees</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +26,8 @@
                 <td>{{ id }}</td>
                 <td>{{ course_name }}</td>
                 <td>{{ course_code }}</td>
+                <td>{{ enrolled_students }}</td>
+                <td><a class ="btn btn-primary" href="/export-course/{course_code}">Export to PDF</a><a class ="btn btn-primary" href="/courses/{{course_code}}">View Course</a></td>
             </tr>
             {{/ items }}
         </tbody>
