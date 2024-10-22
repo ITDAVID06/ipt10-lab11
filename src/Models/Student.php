@@ -10,7 +10,7 @@ class Student extends BaseModel
 
     public function all()
     {
-        $sql = "SELECT id, student_code, CONCAT(first_name, ' ',  last_name) AS student_name, email, date_of_birth, sex FROM students";
+        $sql = "SELECT id, student_code, CONCAT(first_name, ' ',  last_name) AS student_name, first_name, last_name, email, date_of_birth, sex FROM students";
         $statement = $this->db->prepare($sql);
         $statement->execute();
         $result = $statement->fetchAll(PDO::FETCH_CLASS, '\App\Models\Student');
